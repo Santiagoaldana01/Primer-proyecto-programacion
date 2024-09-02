@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Completo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="checkbox"], .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group input[type="submit"], .form-group input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover, .form-group input[type="reset"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Completo</h1>
+        <form action="#" method="post">
+            <!-- Sección de texto -->
+            <div class="section">
+                <h2>Entradas de Texto</h2>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Escribe tu contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@dominio.com" required>
+                </div>
+            </div>
+
+            <!-- Sección de números y teléfonos -->
+            <div class="section">
+                <h2>Números y Teléfonos</h2>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="1" max="100" step="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890">
+                </div>
+            </div>
+
+            <!-- Sección de URLs y fechas -->
+            <div class="section">
+                <h2>URLs y Fechas</h2>
+                <div class="form-group">
+                    <label for="sitio_web">Sitio Web:</label>
+                    <input type="url" id="sitio_web" name="sitio_web" placeholder="https://www.ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="cita">Fecha y Hora de Cita:</label>
+                    <input type="datetime-local" id="cita" name="cita">
+                </div>
+            </div>
+
+            <!-- Sección de casillas de verificación y botones de radio -->
+            <div class="section">
+                <h2>Casillas de Verificación y Botones de Radio</h2>
+                <div class="form-group">
+                    <label for="suscripcion">
+                        <input type="checkbox" id="suscripcion" name="suscripcion" value="si"> Suscribirse a boletín
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Género:</label><br>
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                    <label for="masculino">Masculino</label><br>
+                    <input type="radio" id="femenino" name="genero" value="femenino">
+                    <label for="femenino">Femenino</label>
+                </div>
+            </div>
+
+            <!-- Sección de archivos y rangos -->
+            <div class="section">
+                <h2>Archivos y Rangos</h2>
+                <div class="form-group">
+                    <label for="archivo">Subir Archivo:</label>
+                    <input type="file" id="archivo" name="archivo">
+                </div>
+                <div class="form-group">
+                    <label for="nivel">Nivel:</label>
+                    <input type="range" id="nivel" name="nivel" min="0" max="100">
+                </div>
+            </div>
+
+            <!-- Sección de colores y ocultos -->
+            <div class="section">
+                <h2>Colores y Ocultos</h2>
+                <div class="form-group">
+                    <label for="color_fondo">Seleccionar Color:</label>
+                    <input type="color" id="color_fondo" name="color_fondo">
+                </div>
+                <input type="hidden" name="id_usuario" value="12345">
+            </div>
+
+            <!-- Botones de envío y restablecimiento -->
+            <div class="form-group">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
